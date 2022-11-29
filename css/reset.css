@@ -1,0 +1,394 @@
+@charset "utf-8";
+
+/* Pretendard */
+@font-face{
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* NanumBarunGothic */
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url("../font/NanumBarunGothic.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/*보편적 스타일링 reset.css*/
+html,
+body,
+div,
+span,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+address,
+pre,
+cite,
+form,
+fieldset,
+input,
+textarea,
+select,
+table,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+fieldset,
+img,
+abbr,
+acronym {
+  border: 0 none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 0 none;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  border: 0;
+}
+
+address,
+caption,
+strong,
+em,
+cite {
+  font-weight: normal;
+  font-style: normal;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+
+hr {
+  display: none;
+}
+
+/* HTML5 Boilerplate  */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+img,
+video {
+  /*max-width:100%;*/
+  border: 0;
+  vertical-align: middle;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  object-fit: cover;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+ul,
+ol,
+dl {
+  list-style: none;
+}
+a {
+  display: block;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,
+select,
+label {
+  vertical-align: middle;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  vertical-align: middle;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  -webkit-appearance: none; /* 네이티브 외형 감추기*/
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: normal;
+  letter-spacing: normal;
+  cursor: pointer;
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand {
+  display: none;
+}
+select{color: #000000;}
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  font-weight: normal;
+  letter-spacing: normal;
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+}
+
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+  color: #000;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  cursor: pointer;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: 'Pretendard', sans-serif; 
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fefefe;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 3px;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+/* 업데이트 버전 상관없이 작동가능코드 */
+input,
+input:before,
+input:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+::selection {
+  background: #222;
+  color: #fff;
+}
+
+.p_1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+
+.p_2 {
+  /* 두줄처리 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+
+.nowrap {
+  /*한줄처리  width 값 필요*/
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+:root {
+  --main-blue: #003b95;
+  --main-yellow: #fabf00;
+  --main-red: #fa0000;
+  --main-green: #00950a;
+  --main-gray: #9b9b9b;
+  --main-light-gray: #eeeeee;
+  --main-white: #ffffff;
+}
+
+/* b {
+  font-weight: bold;
+} */
+
+/* button.border-blue {
+  color: var(--main-blue);
+  background-color: var(--main-white);
+  border: 1px solid var(--main-blue);
+} */
+
+/*****공통*****/
+/********** PC **********/
+
+/********** 모바일 **********/
+/* @media screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: calc(100vw * (16 / 428));
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  input.input-default {
+    height: calc(100vw * (48 / 428));
+    color: #444444;
+    padding: 0 calc(100vw * (16 / 428));
+  }
+
+  button.bg-blue,
+  button.border-blue {
+    height: calc(100vw * (48 / 428));
+    font-size: calc(100vw * (20 / 428));
+  }
+} */
