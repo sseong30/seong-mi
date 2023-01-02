@@ -1,6 +1,6 @@
 // modal bg
 $(function() {
-    $(".project_list .list").on('click', function(){
+    $(".project_list .list .img_box").on('click', function(){
         $(".pop_bg").addClass('show');
     });
     $(".pop .close_btn,.pop_bg").on('click', function(){
