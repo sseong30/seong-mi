@@ -8,21 +8,35 @@
     <!-- favicon -->
     <!-- <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="icon" href="img/favicon.ico"> -->
-    <link rel="favicon" href="">
+    <!-- <link rel="favicon" href=""> -->
     <!-- css -->
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- script -->
-    <script defer src="/js/common.js"></script>
-    <script defer src="/js/index.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- <script defer src="js/index.js"></script> -->
 </head>
 <body>
     <!-- modal -->
-    <!-- <div class="pop">
-        <div class="wrap_inner"></div>
-        <button type="button" class="close_btn">닫기</button>
-    </div> -->
+    <div class="pop modal1">
+        <div class="wrap_inner">
+            <div class="project_desc">
+                <h3 class="title">본느 BONNE</h3>
+                <a class="link" href="https://www.bonne.co.kr/" target="_blank">
+                    <span>VIEW</span>
+                    <img src="img/arrow_link.svg" alt="">
+                </a>
+            </div>
+            <div class="img_box">
+                <img src="img/project_de_img_01.jpg" alt="">
+            </div>
+        </div>
+        <button type="button" class="close_btn" onclick="hidePop('modal1')">닫기</button>
+    </div>
+
+    <div class="pop_bg"></div>
 
     <!-- page -->
     <div id="wrap">
@@ -63,17 +77,20 @@
         <div id="wrap_content">
             <div class="wrap_inner">
 
-                <section class="loader_section">
-                    <div class="words">
-                        <span class="word">S</span>
-                        <span class="word">E</span>
-                        <span class="word">O</span>
-                        <span class="word">N</span>
-                        <span class="word">G</span>
-                        <span class="word">-</span>
-                        <span class="word">M</span>
-                        <span class="word">I</span>
-                    </div>
+                <section class="project_section">
+                    <ul class="project_list">
+                        <li class="list">
+                            <div class="img_box" onclick="showPop('modal1')">
+                                <img src="img/project_img_01.jpg" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <p class="project_name">본느 BONNE</p>
+                                <!-- <ul class="tags_list">
+                                    <li>LHA</li>
+                                </ul> -->
+                            </div>
+                        </li>
+                    </ul>
                 </section>
 
                 <section class="main_section">
