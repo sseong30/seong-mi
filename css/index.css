@@ -4,70 +4,151 @@ body * {
     -webkit-transition: .2s;
 }
 
-.project_section{margin-top: 300px;}
+.project{position: relative;}
 
-.section_title{
+.project::after {
+    content: '';
     position: absolute;
-    font-size: calc(100vw * (200 / 1920));
-    color: #fff;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    transition: all .3s;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #eee;
 }
-.section_title.on{transition: all .3s;}
+.project_title{
+    font-size: calc(100vw * (200 / 1920));
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+}
 
-.project_section .section_title{left: -100%;transform: rotate(-270deg) translate(10%, 160%);}
-.project_section .section_title.on{left: -10px;}
 
 /***** project_section *****/
-.project_section{padding: 0 calc(100vw * (50 / 1920));}
-.project_section .project_list{
+.project{padding: 0 calc(100vw * (50 / 1920));}
+.project .project_wrap{
     display: flex;
     flex-wrap: wrap;
 }
-.project_section .list{
-    flex-shrink: 0;
-    width: calc(100% / 3);
-    height: auto;
-    padding: 0 30px;
-    margin-bottom: 31px;
-}
-
-
-.project_section .project_list .img_box{
+.project .project_wrap>li{
     position: relative;
     top: 5px;
-    display: block;
-    width: 100%;
-    height: calc(100vw * (450 / 1920));
+    flex-shrink: 0;
+    width: calc(100% / 3 - calc(100vw * (30 / 1920)));
+    height: auto;
+    padding: calc(100vw * (50 / 1920));
+    margin: calc(100vw * (15 / 1920));
+    margin-bottom: 31px;
+    background: #fff;
+    border-radius: 15px;
+}
+.project .project_wrap>li:before, .project .project_wrap>li:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+.project .project_wrap>li:after{
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+.project .project_wrap>li:hover{top: 0;}
+
+
+.project .project_wrap .img_box{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
     overflow: hidden;
-    border: 1px solid #eee;
+}
+.project .project_wrap .icon_img{
+    width: calc(100vw * (50 / 1920));
+    height: calc(100vw * (50 / 1920));
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.project .project_wrap .thum_img{
+    width: calc(100vw * (280 / 1920));
+    height: calc(100vw * (200 / 1920));
+    overflow: hidden;
     box-sizing: border-box;
     border-radius: 3%;
-    cursor: pointer;
 }
-.project_section .project_list .img_box img{
+.project .project_wrap .icon_img img,.project .project_wrap .thum_img img{
     width: 100%;
     height: 100%;
-    opacity: .8;
 }
-.project_section .project_list .txt_box{margin-top: 14px;}
-.project_section .project_list .tags_list{display: flex;flex-wrap: wrap;align-items: center;}
-.project_section .project_list .project_name{font-size: 20px;text-align: center;font-weight: 800;margin-bottom: 10px;}
+.project .project_wrap .text_box{margin-top: 14px;}
+.project .project_wrap .date{color: #222;font-size: calc(100vw * (15 / 1920));}
+.project .project_wrap .project_name{color: #222;font-size: calc(100vw * (40 / 1920));font-weight: 800;margin-top: 20px;}
 
-.project_section .project_list .img_box:hover{top: 0;}
-.project_section .project_list .img_box:hover img{opacity: 1;}
+.project .project_wrap .tag_list li{
+    display: inline-flex;
+    align-items: center;
+    color: #222;
+    font-size: calc(100vw * (15 / 1920));
+    padding: calc(100vw * (5 / 1920)) calc(100vw * (15 / 1920));
+    margin-top: 10px;
+    border: 1px solid #222;
+    border-radius: 15px;
+}
+.project .project_wrap .tag_list li:not(:last-child){margin-right: calc(100vw * (10 / 1920));}
+
+.project .view_link_list{margin-top: calc(100vw * (40 / 1920));}
+.project .view_link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: calc(100vw * (10 / 1920)) calc(100vw * (15 / 1920));
+    background-color: #0a0a0a;
+}
+.project .view_link:not(:last-child){margin-bottom: calc(100vw * (10 / 1920));}
+.project .view_link span{color: #fff;font-size: calc(100vw * (15 / 1920));}
+.project .view_link img{
+    display: block;
+    width: auto;
+    height: 80%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    transform: translateX(0);
+    transition: all 0.3s;
+}
+
+.project .view_link:hover img{
+    transform: translateX(50%);
+}
 
 /********** mobile **********/
 @media all and (max-width:1024px){
-    .section_title{font-size: 50px;}
+    .project_title{font-size: 50px;}
 
     /***** project_section *****/
-    .project_section{padding: 0 calc(100vw * (10 / 428));}
-    .project_section .project_list{justify-content: space-between;}
-    .project_section .list{width: calc(100% / 2);padding: 0 calc(100vw * (10 / 428));margin-bottom: calc(100vw * (32 / 428));}
+    /* .project{padding: 0 calc(100vw * (10 / 428));}
+    .project .project_wrap{justify-content: space-between;}
+    .project .list{width: calc(100% / 2);padding: 0 calc(100vw * (10 / 428));margin-bottom: calc(100vw * (32 / 428));}
     
-    .project_section .project_list .img_box{top: 0;height: calc(100vw * (180 / 428));}
-    /* .project_section .project_list .img_box img{opacity: 1;} */
-    .project_section .project_list .txt_box{margin-top: calc(100vw * (10 / 428));}
-    .project_section .project_list .project_name{font-size: calc(100vw * (12 / 428));margin-bottom: calc(100vw * (10 / 428));}
+    .project .project_wrap .img_box{top: 0;height: calc(100vw * (180 / 428));}
+    .project .project_wrap .txt_box{margin-top: calc(100vw * (10 / 428));}
+    .project .project_wrap .project_name{font-size: calc(100vw * (12 / 428));margin-bottom: calc(100vw * (10 / 428));} */
 }
