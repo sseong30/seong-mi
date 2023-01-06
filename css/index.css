@@ -3,14 +3,64 @@ body * {
     transition: .2s;
     -webkit-transition: .2s;
 }
-/* #wrap_content{background: #eee;} */
 
-.project_title{
+/*  기본 */
+/* .project_title{
     font-size: 100px;
     color: #222;
     font-weight: bold;
     text-align: center;
+} */
+/* 효과 1 */
+.project_title{
+    display: flex;
+    justify-content: center;
+    color: #222;
+    font-size: 8rem; 
+    /* text-align: center; */
 }
+.project_title::after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.about .project_title::after{
+    background: url(../img/icon_title_01.svg) center 100% / contain no-repeat;
+}
+.project .project_title::after{
+    background: url(../img/icon_title_02.svg) center 100% / contain no-repeat;
+}
+
+.project_title span{
+    position: relative;
+}
+.about .project_title span{text-shadow: .03em .03em 0 #32AA87;}
+.project .project_title span{text-shadow: .03em .03em 0 #555;}
+.project_title span:after{
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em;
+    left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shad-anim 30s linear infinite;
+}
+.about .project_title span:after{
+    background-image: linear-gradient(45deg,transparent 45%,#32AA87 45%, #32AA87 55%,transparent 0);
+}
+.project .project_title span:after{
+    background-image: linear-gradient(45deg,transparent 45%,#555 45%, #555 55%,transparent 0);
+}
+  
+@keyframes shad-anim {
+    0% {background-position: 0 0}
+    100% {background-position: 100% -100%}
+}
+
 .about .project_wrap, .project .project_wrap{margin-top: 100px;}
 
 /***** intro_section *****/
@@ -81,31 +131,36 @@ body * {
 }
 
 /***** about_section *****/
-.about{padding: 100px calc(100vw * (350 / 1920)) 200px;}
-.about .project_wrap{
-    display: flex;
-    justify-content: space-between;
+@keyframes bump {
+    0% {
+        transform: translate(0, 3px);
+    }
+    100% {
+        transform: translate(0, -3px);
+    }
 }
-.about .img_box{width: 40%;height: auto;}
-.about .img_box img{width: 100%;}
+
+.about{padding: 100px calc(100vw * (100 / 1920)) 200px;}
+
+.about .about_area p{
+    font-size: 35px;
+    line-height: 1.5;
+    text-align: right;
+}
 
 .about .text_box{width: 50%;}
-.about .project_wrap .text_box>div:not(:last-child){margin-bottom: 20px;}
+.about .project_wrap .text_box>div:not(:last-child){margin-bottom: 30px;}
 .about .detail_title{
     display: inline-block;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     background: #0a0a0a;
     padding: 3px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.about .about_area{}
-.about .about_area .title{font-size: 18px;font-weight: 700;}
-.about .about_area .text{font-size: 16px;margin-top: 25px;}
-
 .about .skills_area{}
-.about .skills_text{font-size: 16px;}
+.about .skills_text{font-size: 18px;}
 
 .about .detail_area{}
 .about .detail_area>ul{}
@@ -115,7 +170,7 @@ body * {
     display: block;
     width: 100%;
     border-bottom: 3px dotted #222;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .about .detail_area .detail_date{
     color: #b34831;
@@ -127,18 +182,18 @@ body * {
 .about .detail_area .detail_sub_title{}
 .about .detail_area .detail_sub_title span{}
 .about .detail_area .company_name{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
 }
 .about .detail_area .company_position{
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 5px;
 }
 .about .detail_area .detail_text{margin-top: 5px;}
 .about .detail_area .detail_text p{
     color: #7f7f7f;
     line-height: 1.5;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -157,6 +212,9 @@ body * {
     overflow: hidden;
     box-sizing: border-box;
     border-radius: 50%;
+    
+    transform: translate(-50%, 0);
+    animation: bump 0.5s ease-in-out infinite alternate;
 }
 .about .info_area .icon_img img{
     display: block;
@@ -164,7 +222,7 @@ body * {
     height: 100%;
 }
 .about .info_area .text{
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 5px;
 }
 
@@ -303,10 +361,10 @@ body * {
     .project_title{font-size: calc(100vw * (40 / 428));}
 
     /***** intro_section *****/
-    .intro .title_area .title p{font-size: calc(100vw * (45 / 428));}
+    .intro .title_area .title p{font-size: calc(100vw * (30 / 428));}
     .intro .title_area .img_box{
-        width: calc(100vw * (250 / 428));
-        height: calc(100vw * (350 / 428));
+        width: calc(100vw * (150 / 428));
+        height: calc(100vw * (250 / 428));
     }
 
     .intro .text_area span{
@@ -321,7 +379,7 @@ body * {
 
     /***** about_section *****/
     .about{padding: 100px calc(100vw * (15 / 428)) 200px;}
-    .about .img_box{display: none;}
+
     .about .text_box{width: 100%;}
 
     /***** project_section *****/
