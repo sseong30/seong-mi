@@ -4,13 +4,6 @@ body * {
     -webkit-transition: .2s;
 }
 
-.project_title{
-    font-size: 60px;
-    color: #222;
-    font-weight: bold;
-    text-align: center;
-}
-
 /***** intro_section *****/
 .intro{
     width: 100vw;
@@ -46,16 +39,6 @@ body * {
 .intro .title_area .title p{line-height: 1.2;font-size: 60px;text-align: center;}
 .intro .title_area .title .main_title{color: #61B1AF;}
 .intro .title_area .title .sub_title{color: #ddd;font-weight: bolder;}
-
-.intro .title_area .text{}
-
-.intro .title_area .img_box{
-    width: calc(100vw * (350 / 1920));
-    height: calc(100vh / 2);
-    overflow: hidden;
-    background: url(../img/intro_bg.png) center 100% / contain no-repeat;
-    margin-top: 20px;
-}
 
 .intro .text_area{
     position: absolute;
@@ -101,8 +84,6 @@ body * {
     height: 100vh;
     padding: 10vh 80px;
 }
-.about .name_inner{}
-.about .name_inner p{}
 .about .name_inner .name{
     color: #4B4744;
     font-size: 40px;
@@ -121,7 +102,6 @@ body * {
     height: 30vh;
     background-color: #7f7f7f;
 }
-
 
 .about .text_area{
     display: flex;
@@ -145,7 +125,7 @@ body * {
 }
 .about .content_inner:not(:last-child){align-items: baseline;margin-bottom: 40px;}
 .about .skills_inner{}
-.about .skills_text{color: #7f7f7f;font-size: 14px;}
+.about .skills_text{color: #7f7f7f;line-height: 1.5;font-size: 14px;}
 
 .about .detail_inner{}
 .about .detail_inner>ul{}
@@ -165,7 +145,6 @@ body * {
 }
 .about .detail_inner .detail_list{margin-top: 5px;}
 .about .detail_inner .detail_sub_title{color: #4B4744;}
-.about .detail_inner .detail_sub_title span{}
 .about .detail_inner .company_name{
     font-size: 14px;
     font-weight: 700;
@@ -182,7 +161,6 @@ body * {
     font-weight: 400;
 }
 
-.about .info_inner{}
 .about .info_inner>ul{display: flex;}
 .about .info_inner>ul li:not(:last-child){margin-right: 20px;}
 .about .info_inner>ul li a{
@@ -210,12 +188,12 @@ body * {
     color: #4B4744;
     font-size: 14px;
     font-weight: 700;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 /***** project_section *****/
-.project{position: relative;padding: 100px calc(100vw * (50 / 1920)) 200px;}
-.project::after {
+.project{position: relative;padding: 100px 30px 80px;}
+.project::after{
     content: '';
     position: absolute;
     top: 0;
@@ -227,15 +205,22 @@ body * {
     background: #eee;
 }
 
+.project_title{
+    font-size: 60px;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+}
+
 .project .project_wrap{display: flex;flex-wrap: wrap;margin-top: 80px;}
 .project .project_wrap>li{
     position: relative;
     top: 5px;
     flex-shrink: 0;
-    width: calc(100% / 3 - calc(100vw * (45 / 1920)));
+    width: calc(100% / 3 - 30px);
     height: auto;
-    padding: calc(100vw * (50 / 1920));
-    margin: calc(100vw * (15 / 1920)) calc(100vw * (15 / 1920)) calc(100vw * (15 / 1920)) calc(100vw * (20 / 1920));
+    padding: 30px;
+    margin: 0 15px 30px 15px;
     background: #fff;
     border-radius: 15px;
 }
@@ -277,17 +262,16 @@ body * {
     overflow: hidden;
 }
 .project .project_wrap .icon_img{
-    width: calc(100vw * (50 / 1920));
-    height: calc(100vw * (50 / 1920));
+    width: 40px;
+    height: 40px;
     overflow: hidden;
     box-sizing: border-box;
     border-radius: 50%;
 }
 
 .project .project_wrap .thum_img{
-    width: calc(100vw * (280 / 1920));
-    height: calc(100vw * (200 / 1920));
-    margin-top: 20px;
+    width: 60%;
+    height: 150px;
     overflow: hidden;
     box-sizing: border-box;
     border-radius: 3%;
@@ -296,13 +280,14 @@ body * {
     display: block;
     width: 100%;
     height: 100%;
+    object-position: top;
 }
 .project .project_wrap .text_box{margin-top: 14px;}
-.project .project_wrap .date{color: #222;font-size: calc(100vw * (15 / 1920));}
+.project .project_wrap .date{color: #222;font-size: 16px;}
 .project .project_wrap .project_name{
     color: #222;
     line-height: 1.5;
-    font-size: calc(100vw * (40 / 1920));
+    font-size: 30px;
     font-weight: 800;
     margin-top: 20px;
 }
@@ -311,13 +296,13 @@ body * {
     display: inline-flex;
     align-items: center;
     color: #222;
-    font-size: calc(100vw * (15 / 1920));
-    padding: calc(100vw * (5 / 1920)) calc(100vw * (15 / 1920));
+    font-size: 12px;
+    padding: 5px 10px;
     margin-top: 10px;
     border: 1px solid #222;
     border-radius: 15px;
 }
-.project .project_wrap .tag_list li:not(:last-child){margin-right: calc(100vw * (10 / 1920));}
+.project .project_wrap .tag_list li:not(:last-child){margin-right: 8px;}
 
 .project .view_link_list{margin-top: 20px;}
 .project .view_link{
@@ -325,11 +310,11 @@ body * {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: calc(100vw * (10 / 1920)) calc(100vw * (15 / 1920));
+    padding: 10px;
     background-color: #0a0a0a;
 }
 .project .view_link:not(:last-child){margin-bottom: 5px;}
-.project .view_link span{color: #fff;font-size: calc(100vw * (15 / 1920));}
+.project .view_link span{color: #fff;font-size: 14px;}
 .project .view_link img{
     display: block;
     width: auto;
@@ -344,68 +329,146 @@ body * {
 }
 
 /********** mobile **********/
-@media all and (max-width:1024px){
-    .project_title{font-size: calc(100vw * (40 / 428));}
+@media all and (max-width: 1024px){
+    /***** about_section *****/
+    .about .title_area{padding: 10vh 40px;}
+    .about .text_area{padding: 10vh 40px;}
 
-    /***** intro_section *****/
-    .intro .title_area .title p{font-size: calc(100vw * (30 / 428));}
-    .intro .title_area .img_box{
-        width: calc(100vw * (150 / 428));
-        height: calc(100vw * (250 / 428));
+    /***** project_section *****/
+    .project .project_wrap>li{
+        width: calc(100% / 2 - 20px);
+        margin: 0 10px 30px;
     }
+}
+
+@media all and (max-width: 768px){
+    /***** intro_section *****/
+    .intro .title_area .title p{font-size: 40px;}
 
     .intro .text_area span{
-        font-size: calc(100vw * (15 / 428));
+        font-size: 15px;
     }
     .intro .text_area .name{
-        right: -5%;
+        top: 80px;
+        right: -20px;
     }
     .intro .text_area .job{
-        left: -5%;
+        bottom: 80px;
+        left: -20px;
     }
 
     /***** about_section *****/
-    .about{padding: 100px calc(100vw * (15 / 428)) 200px;}
+    .about .project_wrap{display: block;height: auto;padding: 50px 0;}
 
-    .about .text_box{width: 100%;}
+    .about .title_area{
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0 30px;
+    }
+    .about .name_inner .name{
+        font-size: 32px;
+    }
+
+    .about .name_inner .text, .about .des_inner{
+        color: #7f7f7f;
+    }
+    .about .name_inner .text{font-size: 18px;margin-top: 10px;}
+    .about .des_inner{font-size: 16px;}
+    .about .line_inner{
+        height: 80px;
+        margin: 20px 0;
+    }
+
+    .about .text_area{
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0 30px;
+        margin-top: 50px;
+    }
+    .about .detail_title{
+        display: inline-block;
+        width: auto;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .about .content_inner{
+        display: block;
+    }
+    .about .skills_text{font-size: 16px;}
+
+    .about .detail_inner>ul li:not(:last-child)::after{
+        border-bottom: 2px dotted #cacaca;
+        margin: 15px 0;
+    }
+    .about .detail_inner .company_name{
+        font-size: 16px;
+    }
+    .about .detail_inner .company_position{
+        font-size: 14px;
+    }
+    .about .detail_inner .detail_text p{
+        font-size: 14px;
+    }
+
+    .about .info_inner>ul li:not(:last-child){margin-right: 20px;}
+    .about .info_inner .icon_img{
+        width: 55px;
+        height: 55px;
+    }
+    .about .info_inner .text{
+        font-size: 16px;
+    }
 
     /***** project_section *****/
-    .project{padding: 100px calc(100vw * (10 / 428)) 200px;}
+    .project{padding: 50px 5px;}
+
+    .project_title{
+        font-size: 40px;
+    }
+
+    .project .project_wrap{margin-top: 25px;}
     .project .project_wrap>li{
         top: 0;
-        width: calc(100% / 2 - calc(100vw * (10 / 428)));
-        padding: calc(100vw * (15 / 428));
-        margin: calc(100vw * (10 / 428)) calc(100vw * (5 / 428));
+        width: calc(100% / 2 - 10px);
+        padding: 15px;
+        margin: 0 5px 20px;
     }
 
     .project .project_wrap .img_box{
         display: block;
     }
-    .project .project_wrap .icon_img{display: none;}
+    .project .project_wrap .icon_img{
+        display: none;
+    }
 
     .project .project_wrap .thum_img{
         width: 100%;
-        height: calc(100vw * (100 / 428));
-        margin-top: 0;
+        height: calc(100vw * (220 / 768));
     }
-    .project .project_wrap .icon_img img,.project .project_wrap .thum_img img{
-        width: 100%;
-        height: 100%;
+    .project .project_wrap .text_box{margin-top: 10px;}
+    .project .project_wrap .date{font-size: 12px;}
+    .project .project_wrap .project_name{
+        font-size: 16px;
+        margin-top: 15px;
     }
-    .project .project_wrap .date{font-size: calc(100vw * (8 / 428));}
-    .project .project_wrap .project_name{font-size: calc(100vw * (15 / 428));}
 
     .project .project_wrap .tag_list li{
-        font-size: calc(100vw * (8 / 428));
-        padding: calc(100vw * (2 / 428)) calc(100vw * (5 / 428));
+        padding: 3px 8px;
+        margin-top: 5px;
     }
-    .project .project_wrap .tag_list li:not(:last-child){margin-right: calc(100vw * (3 / 428));}
+    .project .project_wrap .tag_list li:not(:last-child){margin-right: 3px;}
 
+    .project .view_link_list{margin-top: 15px;}
     .project .view_link{
-        padding: calc(100vw * (5 / 428)) calc(100vw * (10 / 428));
+        padding: 8px 10px;
     }
-    .project .view_link span{font-size: calc(100vw * (8 / 428));}
-    .project .view_link img{
-        transform: translateX(50%);
+    .project .view_link:not(:last-child){margin-bottom: 8px;}
+    .project .view_link span{font-size: 12px;}
+
+    .project .view_link:hover img{
+        transform: translateX(0);
     }
 }
