@@ -82,8 +82,9 @@ body * {
     justify-content: space-between;
     width: 40%;
     height: 100vh;
-    padding: 10vh 80px;
+    padding: 10vh 0 10vh 80px;
 }
+
 .about .name_inner .name{
     color: #4B4744;
     font-size: 40px;
@@ -109,7 +110,7 @@ body * {
     justify-content: flex-end;
     width: 60%;
     height: 100vh;
-    padding: 10vh 80px;
+    padding: 10vh 80px 10vh 0;
 }
 .about .project_wrap .text_box>div:not(:last-child){margin-bottom: 30px;}
 .about .detail_title{
@@ -331,8 +332,8 @@ body * {
 /********** mobile **********/
 @media all and (max-width: 1024px){
     /***** about_section *****/
-    .about .title_area{padding: 10vh 40px;}
-    .about .text_area{padding: 10vh 40px;}
+    .about .title_area{padding: 10vh 0 10vh 40px;}
+    .about .text_area{padding: 10vh 40px 10vh 0;}
 
     /***** project_section *****/
     .project .project_wrap>li{
@@ -358,7 +359,7 @@ body * {
     }
 
     /***** about_section *****/
-    .about .project_wrap{display: block;height: auto;padding: 50px 0;}
+    .about .project_wrap{display: block;height: auto;padding: 80px 0;}
 
     .about .title_area{
         display: block;
