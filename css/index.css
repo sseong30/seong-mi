@@ -82,7 +82,7 @@ body * {
     justify-content: space-between;
     width: 40%;
     height: 100vh;
-    padding: 10vh 0 10vh 80px;
+    padding: 20vh 0 10vh 80px;
 }
 
 .about .name_inner .name{
@@ -193,7 +193,7 @@ body * {
 }
 
 /***** project_section *****/
-.project{position: relative;padding: 100px 30px 80px;}
+.project{position: relative;padding: 150px 30px 80px;}
 .project::after{
     content: '';
     position: absolute;
@@ -332,7 +332,7 @@ body * {
 /********** tablet **********/
 @media all and (max-width: 1024px){
     /***** about_section *****/
-    .about .title_area{padding: 10vh 0 10vh 40px;}
+    .about .title_area{padding: 20vh 0 10vh 40px;}
     .about .text_area{padding: 10vh 40px 10vh 0;}
 
     /***** project_section *****/
@@ -431,7 +431,7 @@ body * {
         font-size: 40px;
     }
 
-    .project .project_wrap{margin-top: 25px;}
+    .project .project_wrap{margin-top: 50px;}
     .project .project_wrap>li{
         top: 0;
         width: calc(100% / 2 - 10px);
