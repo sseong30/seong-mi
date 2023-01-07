@@ -329,7 +329,7 @@ body * {
     transform: translateX(50%);
 }
 
-/********** mobile **********/
+/********** tablet **********/
 @media all and (max-width: 1024px){
     /***** about_section *****/
     .about .title_area{padding: 10vh 0 10vh 40px;}
@@ -342,6 +342,7 @@ body * {
     }
 }
 
+/********** mobile **********/
 @media all and (max-width: 768px){
     /***** intro_section *****/
     .intro .title_area .title p{font-size: 40px;}
@@ -457,10 +458,11 @@ body * {
     }
 
     .project .project_wrap .tag_list li{
-        padding: 3px 8px;
+        font-size: 8px;
+        padding: 3px 5px;
         margin-top: 5px;
     }
-    .project .project_wrap .tag_list li:not(:last-child){margin-right: 3px;}
+    .project .project_wrap .tag_list li:not(:last-child){margin-right: 2px;}
 
     .project .view_link_list{margin-top: 15px;}
     .project .view_link{

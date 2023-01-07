@@ -96,22 +96,29 @@ header .util_link{
     padding: 30px;
     background-color: #ffffff;
 }
-.pop .title{font-size: 20px;color: #0a0a0a;font-weight: 800;}
+.pop .title{line-height: 1.4;font-size: 22px;color: #0a0a0a;font-weight: 800;}
 
-.pop .sub_text{font-size: 14px;color: #000000;margin-top: 10px;}
+.pop .sub_text{line-height: 1.6;font-size: 14px;color: #000000;margin-top: 10px;}
 
 .pop .img_box, .pop .img_box img{width: 100%; height: auto;}
 .pop .img_box.small{display: flex;justify-content: center;background: #eee;}
 .pop .img_box.small img{width: 50%;}
 
-/********** mobile **********/
+/********** tablet **********/
 @media all and (max-width:1024px){
-    .pop{
-        width: 80%;
-        height: 60%;
+    .pop .title{padding-right: 30px;}
+}
+
+/********** mobile **********/
+@media all and (max-width:768px){
+    .pop{width: 80%;}
+    .pop .close_btn{
+        top: 12px;
+        right: 12px;
+        width: 30px;
+        height: 30px;
     }
 
-    .pop .text li{
-        font-size: calc(100vw * (10 / 428));
-    }
+    .pop .project_desc{padding: 15px 20px;}
+    .pop .title{font-size: 18px;}
 }
