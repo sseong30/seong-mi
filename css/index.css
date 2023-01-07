@@ -359,7 +359,7 @@ body * {
     }
 
     /***** about_section *****/
-    .about .project_wrap{display: block;height: auto;padding: 80px 0;}
+    .about .project_wrap{display: block;height: auto;padding: 150px 0;}
 
     .about .title_area{
         display: block;
@@ -424,7 +424,7 @@ body * {
     }
 
     /***** project_section *****/
-    .project{padding: 50px 5px;}
+    .project{padding: 150px 5px 50px;}
 
     .project_title{
         font-size: 40px;
