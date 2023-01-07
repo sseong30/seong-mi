@@ -45,7 +45,7 @@ body * {
 }
 .intro .title_area .title p{line-height: 1.2;font-size: 60px;text-align: center;}
 .intro .title_area .title .main_title{color: #61B1AF;}
-.intro .title_area .title .sub_title{font-weight: bolder;}
+.intro .title_area .title .sub_title{color: #ddd;font-weight: bolder;}
 
 .intro .title_area .text{}
 
@@ -66,6 +66,7 @@ body * {
 }
 .intro .text_area span{
     position: absolute;
+    color: #ddd;
     font-size: 18px;
     font-weight: 700;
 }
@@ -103,35 +104,16 @@ body * {
 .about .name_inner{}
 .about .name_inner p{}
 .about .name_inner .name{
-    position: relative;
-    display: inline-block;
-}
-.about .name_inner .name span{
-    position: relative;
     color: #4B4744;
     font-size: 40px;
     font-weight: bolder;
-    z-index: 2;
 }
-.about .name_inner .name::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-40%, 20%);
-    display: block;
-    width: 130%;
-    height: 50%;
-    background-color: #61B1AF;
-    border-radius: 15px;
-    z-index: 1;
-}
+
 .about .name_inner .text, .about .des_inner{
     color: #7f7f7f;
     line-height: 1.5;
-    margin-top: 15px;
 }
-.about .name_inner .text{font-size: 18px;}
+.about .name_inner .text{font-size: 16px;margin-top: 10px;}
 .about .des_inner{font-size: 15px;}
 .about .line_inner{
     display: block;
