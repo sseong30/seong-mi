@@ -1,18 +1,17 @@
 // header scroll event
-$(function(){
-    var lastScroll = 0;
-    $(window).scroll(function(event){
-         var scroll = $(this).scrollTop();
-         var section = $("#intro").height();
-         if (scroll > section){
-         //이벤트를 적용시킬 스크롤 높이
-            $("#wrap").find("header").addClass("scroll");
-         }
-         else {
-            $("#wrap").find("header").removeClass("scroll");
-         }
-         lastScroll = scroll;
-    });
+var lastScroll = 0;
+
+$(window).scroll(function(event){
+     var scroll = $(this).scrollTop();
+     var section = $("#intro").height();
+     if (scroll > section){
+     //이벤트를 적용시킬 스크롤 높이
+        $("#wrap").find("header").addClass("scroll");
+     }
+     else {
+        $("#wrap").find("header").removeClass("scroll");
+     }
+     lastScroll = scroll;
 });
 
 // modal bg
