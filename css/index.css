@@ -343,6 +343,12 @@ body * {
         margin: 0 10px 30px;
     }
 }
+@media all and (max-width: 830px){
+    /***** project_section *****/
+    .project .project_wrap .thum_img{
+        height: 140px;
+    }
+}
 
 /********** mobile **********/
 @media all and (max-width: 768px){
