@@ -8,8 +8,9 @@ body * {
 .intro{
     width: 100vw;
     height: 100vh;
+    background: var(--intro-dark-gray);
 }
-.intro .project_wrap{position: relative;background: #444444;}
+.intro .project_wrap{position: relative;}
 .intro .title_area{
     width: 100vw;
     height: 100vh;
@@ -26,7 +27,7 @@ body * {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: #444444;
+    background: var(--intro-dark-gray);
     padding: 30px 0;
 }
 .intro .title_inner::before{
@@ -34,11 +35,11 @@ body * {
     display: block;
     width: 1px;
     height: 100vh;
-    background: #61B1AF;
+    background: var(--mint);
 }
 .intro .title_area .title p{line-height: 1.2;font-size: 60px;text-align: center;}
-.intro .title_area .title .main_title{color: #61B1AF;}
-.intro .title_area .title .sub_title{color: #ddd;font-weight: bolder;}
+.intro .title_area .title .main_title{color: var(--mint);}
+.intro .title_area .title .sub_title{color: var(--intro-gray);font-weight: bolder;}
 
 .intro .text_area{
     position: absolute;
@@ -49,7 +50,7 @@ body * {
 }
 .intro .text_area span{
     position: absolute;
-    color: #ddd;
+    color: var(--intro-gray);
     font-size: 18px;
     font-weight: 700;
 }
@@ -86,13 +87,13 @@ body * {
 }
 
 .about .name_inner .name{
-    color: #4B4744;
+    color: var(--dark-gray);
     font-size: 40px;
     font-weight: bolder;
 }
 
 .about .name_inner .text, .about .des_inner{
-    color: #7f7f7f;
+    color: var(--gray);
     line-height: 1.5;
 }
 .about .name_inner .text{font-size: 16px;margin-top: 10px;}
@@ -101,7 +102,7 @@ body * {
     display: block;
     width: 1px;
     height: 40vh;
-    background-color: #7f7f7f;
+    background-color: var(--gray);
 }
 
 .about .text_area{
@@ -116,7 +117,7 @@ body * {
 .about .detail_title{
     display: inline-block;
     width: 100px;
-    color: #61B1AF;
+    color: var(--mint);
     font-size: 20px;
     font-weight: bolder;
 }
@@ -126,7 +127,7 @@ body * {
 }
 .about .content_inner:not(:last-child){align-items: baseline;margin-bottom: 40px;}
 .about .skills_inner{}
-.about .skills_text{color: #7f7f7f;line-height: 1.5;font-size: 14px;}
+.about .skills_text{color: var(--gray);line-height: 1.5;font-size: 14px;}
 
 .about .detail_inner{}
 .about .detail_inner>ul{}
@@ -135,17 +136,17 @@ body * {
     content: '';
     display: block;
     width: 100%;
-    border-bottom: 3px dotted #cacaca;
+    border-bottom: 3px dotted var(--light-gray);
     margin: 20px 0;
 }
 .about .detail_inner .detail_date{
-    color: #cacaca;
+    color: var(--light-gray);
     line-height: 1.5;
     font-size: 14px;
     font-weight: lighter;
 }
 .about .detail_inner .detail_list{margin-top: 5px;}
-.about .detail_inner .detail_sub_title{color: #4B4744;}
+.about .detail_inner .detail_sub_title{color: var(--dark-gray);}
 .about .detail_inner .company_name{
     font-size: 14px;
     font-weight: 700;
@@ -156,7 +157,7 @@ body * {
 }
 .about .detail_inner .detail_text{margin-top: 5px;}
 .about .detail_inner .detail_text p{
-    color: #7f7f7f;
+    color: var(--gray);
     line-height: 1.5;
     font-size: 14px;
     font-weight: 400;
@@ -186,7 +187,7 @@ body * {
     height: 100%;
 }
 .about .info_inner .text{
-    color: #4B4744;
+    color: var(--dark-gray);
     font-size: 14px;
     font-weight: 700;
     margin-top: 10px;
@@ -203,12 +204,12 @@ body * {
     display: block;
     width: 100%;
     height: 100%;
-    background: #eee;
+    background: var(--bg-gray);
 }
 
 .project_title{
     font-size: 60px;
-    color: #222;
+    color: var(--light-black);
     font-weight: bold;
     text-align: center;
 }
@@ -222,7 +223,7 @@ body * {
     height: auto;
     padding: 30px;
     margin: 0 15px 30px 15px;
-    background: #fff;
+    background: var(--white);
     border-radius: 15px;
 }
 .project .project_wrap>li:before, .project .project_wrap>li:after {
@@ -234,10 +235,10 @@ body * {
     width: 50%;
     top: 80%;
     max-width:300px;
-    background: #777;
-    -webkit-box-shadow: 0 15px 10px #777;
-    -moz-box-shadow: 0 15px 10px #777;
-    box-shadow: 0 15px 10px #777;
+    background: var(--gray);
+    -webkit-box-shadow: 0 15px 10px var(--gray);
+    -moz-box-shadow: 0 15px 10px var(--gray);
+    box-shadow: 0 15px 10px var(--gray);
     -webkit-transform: rotate(-3deg);
     -moz-transform: rotate(-3deg);
     -o-transform: rotate(-3deg);
@@ -284,9 +285,9 @@ body * {
     object-position: top;
 }
 .project .project_wrap .text_box{margin-top: 14px;}
-.project .project_wrap .date{color: #222;font-size: 16px;}
+.project .project_wrap .date{color: var(--light-black);font-size: 16px;}
 .project .project_wrap .project_name{
-    color: #222;
+    color: var(--light-black);
     line-height: 1.5;
     font-size: 30px;
     font-weight: 800;
@@ -296,11 +297,11 @@ body * {
 .project .project_wrap .tag_list li{
     display: inline-flex;
     align-items: center;
-    color: #222;
+    color: var(--light-black);
     font-size: 12px;
     padding: 5px 10px;
     margin-top: 10px;
-    border: 1px solid #222;
+    border: 1px solid var(--light-black);
     border-radius: 15px;
 }
 .project .project_wrap .tag_list li:not(:last-child){margin-right: 8px;}
@@ -312,10 +313,10 @@ body * {
     align-items: center;
     width: 100%;
     padding: 10px;
-    background-color: #0a0a0a;
+    background-color: var(--black);
 }
 .project .view_link:not(:last-child){margin-bottom: 5px;}
-.project .view_link span{color: #fff;font-size: 14px;}
+.project .view_link span{color: var(--white);font-size: 14px;}
 .project .view_link img{
     display: block;
     width: auto;
@@ -373,7 +374,7 @@ body * {
     }
 
     .about .name_inner .text, .about .des_inner{
-        color: #7f7f7f;
+        color: var(--gray);
     }
     .about .name_inner .text{font-size: 18px;margin-top: 10px;}
     .about .des_inner{font-size: 16px;}
@@ -402,7 +403,7 @@ body * {
     .about .skills_text{font-size: 16px;}
 
     .about .detail_inner>ul li:not(:last-child)::after{
-        border-bottom: 2px dotted #cacaca;
+        border-bottom: 2px dotted var(--light-gray);
         margin: 15px 0;
     }
     .about .detail_inner .company_name{

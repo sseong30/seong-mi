@@ -20,6 +20,20 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  /* color */
+  --white: #ffffff;
+  --black: #000000;
+  --light-black: #222222;
+  --gray: #7f7f7f;
+  --dark-gray: #4B4744;
+  --light-gray: #cacaca;
+  --intro-gray: #dddddd;
+  --intro-dark-gray: #444444;
+  --mint: #61B1AF;
+  --bg-gray: #eeeeee;
+}
+
 /*보편적 스타일링 reset.css*/
 html,
 body,
