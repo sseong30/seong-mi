@@ -20,20 +20,6 @@
   scroll-behavior: smooth;
 }
 
-:root {
-  /* color */
-  --white: #ffffff;
-  --black: #000000;
-  --light-black: #222222;
-  --gray: #7f7f7f;
-  --dark-gray: #4B4744;
-  --light-gray: #cacaca;
-  --intro-gray: #dddddd;
-  --intro-dark-gray: #444444;
-  --mint: #61B1AF;
-  --bg-gray: #eeeeee;
-}
-
 /*보편적 스타일링 reset.css*/
 html,
 body,
@@ -316,7 +302,7 @@ textarea::placeholder {
   color: #aaa;
 }
 
-/* 업데이트 버전 상관없이 작동가능코드 */
+/* safari 업데이트 버전 상관없이 작동가능코드 */
 input,
 input:before,
 input:after {
@@ -326,12 +312,14 @@ input:after {
   -ms-user-select: initial;
   user-select: initial;
 }
+/* safari 업데이트 버전 상관없이 작동가능코드 */
 
 ::selection {
   background: #222;
   color: #fff;
 }
 
+/* 한줄처리 */
 .p_1 {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -341,8 +329,8 @@ input:after {
   word-wrap: break-word;
 }
 
+/* 두줄처리 */
 .p_2 {
-  /* 두줄처리 */
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -351,8 +339,8 @@ input:after {
   word-wrap: break-word;
 }
 
+/*한줄처리 width 값 필요*/
 .nowrap {
-  /*한줄처리 width 값 필요*/
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -361,48 +349,15 @@ input:after {
 }
 
 :root {
-  --main-blue: #003b95;
-  --main-yellow: #fabf00;
-  --main-red: #fa0000;
-  --main-green: #00950a;
-  --main-gray: #9b9b9b;
-  --main-light-gray: #eeeeee;
-  --main-white: #ffffff;
+  /* color */
+  --white: #ffffff;
+  --black: #000000;
+  --light-black: #222222;
+  --gray: #7f7f7f;
+  --dark-gray: #4B4744;
+  --light-gray: #cacaca;
+  --intro-gray: #dddddd;
+  --intro-dark-gray: #444444;
+  --mint: #61B1AF;
+  --bg-gray: #eeeeee;
 }
-
-/* b {
-  font-weight: bold;
-} */
-
-/* button.border-blue {
-  color: var(--main-blue);
-  background-color: var(--main-white);
-  border: 1px solid var(--main-blue);
-} */
-
-/*****공통*****/
-/********** PC **********/
-
-/********** 모바일 **********/
-/* @media screen and (max-width: 768px) {
-  html,
-  body {
-    font-size: calc(100vw * (16 / 428));
-  }
-
-  .pc-only {
-    display: none;
-  }
-
-  input.input-default {
-    height: calc(100vw * (48 / 428));
-    color: #444444;
-    padding: 0 calc(100vw * (16 / 428));
-  }
-
-  button.bg-blue,
-  button.border-blue {
-    height: calc(100vw * (48 / 428));
-    font-size: calc(100vw * (20 / 428));
-  }
-} */

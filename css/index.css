@@ -75,6 +75,7 @@ body * {
     }
 }
 
+.about{background: var(--white);}
 .about .project_wrap{display: flex;align-items: center;height: 100vh;}
 
 .about .title_area{
@@ -273,7 +274,7 @@ body * {
 
 .project .project_wrap .thum_img{
     width: 60%;
-    height: 150px;
+    height: 200px;
     overflow: hidden;
     box-sizing: border-box;
     border-radius: 3%;
