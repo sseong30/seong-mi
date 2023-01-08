@@ -10,9 +10,10 @@ header{
     width: 100%;
     padding: 20px 50px;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 6px -6px #ddd;
     -webkit-box-shadow: 0 10px 6px -6px #ddd;
     -moz-box-shadow: 0 10px 6px -6px #ddd;
-    box-shadow: 0 10px 6px -6px #ddd;
     opacity: 0;
     z-index: -10;
 }
