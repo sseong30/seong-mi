@@ -104,8 +104,12 @@ header .util_link{
     font-size: 22px;
     font-weight: 800;
 }
-
-.pop .sub_text{line-height: 1.6;font-size: 14px;color: var(--black);margin-top: 10px;}
+.pop .percent{font-size: 14px;color: var(--gray);margin-top: 10px;}
+.pop .percent span{display: inline-flex;align-items: center;}
+.pop .percent span:not(:last-child)::after{
+    content: 'ㆍ';
+}
+.pop .sub_text{line-height: 1.6;font-size: 16px;color: var(--black);margin-top: 10px;}
 
 .pop .img_box, .pop .img_box img{width: 100%; height: auto;}
 .pop .img_box.small{display: flex;justify-content: center;background: var(--bg-gray);}
