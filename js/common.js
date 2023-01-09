@@ -18,11 +18,24 @@ $(document).ready(function() {
     // modal bg
     $(".view_link_list .img_view_link").on('click', function(){
         $(".pop_bg").addClass('show');
+        // 스크롤 비활성화
+        document.body.style.overflow = "hidden";
     });
     $(".pop .close_btn,.pop_bg").on('click', function(){
         $(".pop,.pop_bg").removeClass('show');
+        // 스크롤 활성화
+        document.body.style.overflow = "unset";
     });
 });
+
+// 스크롤 비활성화
+// const openModal = (e) => {
+//     document.body.style.overflow = "hidden";
+// };
+// 스크롤 활성화
+// const closeModal = (e) => {
+//     document.body.style.overflow = "unset";
+// };
 
 // modal
 function showPop(modalname) {
