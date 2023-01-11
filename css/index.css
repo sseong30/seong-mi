@@ -82,14 +82,14 @@ body * {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40%;
+    width: 50%;
     height: 100vh;
     padding: 20vh 0 10vh 80px;
 }
 
 .about .name_inner .name{
     color: var(--dark-gray);
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bolder;
 }
 
@@ -97,8 +97,8 @@ body * {
     color: var(--gray);
     line-height: 1.5;
 }
-.about .name_inner .text{font-size: 16px;margin-top: 10px;}
-.about .des_inner{font-size: 15px;}
+.about .name_inner .text{font-size: 24px;margin-top: 10px;}
+.about .des_inner{font-size: 20px;}
 .about .line_inner{
     display: block;
     width: 1px;
@@ -110,25 +110,42 @@ body * {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 60%;
+    width: 50%;
     height: 100vh;
     padding: 10vh 80px 10vh 0;
 }
 .about .project_wrap .text_box>div:not(:last-child){margin-bottom: 30px;}
 .about .detail_title{
     display: inline-block;
-    width: 100px;
+    width: 120px;
     color: var(--mint);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bolder;
+}
+
+.about .about_inner .detail_text,
+.about .skills_inner .skills_text,
+.about .detail_inner>ul,
+.about .info_inner>ul{
+    width: calc(100% - 120px);
 }
 
 .about .content_inner{
     display: flex;
 }
 .about .content_inner:not(:last-child){align-items: baseline;margin-bottom: 40px;}
+
+.about .about_inner{}
+.about .about_inner p:not(:last-child){margin-bottom: 10px;}
+.about .about_inner span{display: inline-block;font-size: 18px;color: var(--dark-gray);}
+.about .about_inner .main_text{
+    width: 70px;
+    font-weight: 700;
+}
+.about .about_inner .sub_text{}
+
 .about .skills_inner{}
-.about .skills_text{color: var(--gray);line-height: 1.5;font-size: 14px;}
+.about .skills_text{color: var(--gray);line-height: 1.5;font-size: 18px;}
 
 .about .detail_inner{}
 .about .detail_inner>ul{}
@@ -143,24 +160,24 @@ body * {
 .about .detail_inner .detail_date{
     color: var(--light-gray);
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: lighter;
 }
 .about .detail_inner .detail_list{margin-top: 5px;}
 .about .detail_inner .detail_sub_title{color: var(--dark-gray);}
 .about .detail_inner .company_name{
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
 }
 .about .detail_inner .company_position{
-    font-size: 12px;
+    font-size: 16px;
     margin-left: 5px;
 }
 .about .detail_inner .detail_text{margin-top: 5px;}
 .about .detail_inner .detail_text p{
     color: var(--gray);
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -189,7 +206,7 @@ body * {
 }
 .about .info_inner .text{
     color: var(--dark-gray);
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     margin-top: 10px;
 }
@@ -335,7 +352,23 @@ body * {
 @media all and (max-width: 1024px){
     /***** about_section *****/
     .about .title_area{padding: 20vh 0 10vh 40px;}
-    .about .text_area{padding: 10vh 40px 10vh 0;}
+    .about .text_area{padding: 10vh 40px 10vh 40px;}
+
+    .about .content_inner{
+        display: block;
+    }
+    .about .detail_title{
+        display: inline-block;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .about .about_inner .detail_text,
+    .about .skills_inner .skills_text,
+    .about .detail_inner>ul,
+    .about .info_inner>ul{
+        width: 100%;
+    }
 
     /***** project_section *****/
     .project .project_wrap>li{
@@ -343,15 +376,14 @@ body * {
         margin: 0 10px 30px;
     }
 }
-@media all and (max-width: 830px){
-    /***** project_section *****/
+/* @media all and (max-width: 830px){
     .project .project_wrap .thum_img{
         height: 140px;
     }
-}
+} */
 
 /********** mobile **********/
-@media all and (max-width: 768px){
+@media all and (max-width: 900px){
     /***** intro_section *****/
     .intro .title_area .title p{font-size: 40px;}
 
@@ -398,15 +430,14 @@ body * {
         margin-top: 50px;
     }
     .about .detail_title{
-        display: inline-block;
-        width: auto;
         font-size: 18px;
-        margin-bottom: 10px;
     }
 
-    .about .content_inner{
-        display: block;
+    .about .about_inner span{font-size: 16px;}
+    .about .about_inner .main_text{
+        width: 70px;
     }
+
     .about .skills_text{font-size: 16px;}
 
     .about .detail_inner>ul li:not(:last-child)::after{
