@@ -30,11 +30,11 @@ header .util_wrap{
     width: 100%;
 }
 header .util_wrap>li:not(:last-child){
-    margin-right: 30px;
+    margin-right: 80px;
 }
 
 header .util_link{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
 }
 
@@ -115,8 +115,11 @@ header .util_link{
 .pop .img_box.small{display: flex;justify-content: center;background: var(--bg-gray);}
 .pop .img_box.small img{width: 50%;}
 
+/********** tablet **********/
+@media all and (max-width: 1024px){}
+
 /********** mobile **********/
-@media all and (max-width:768px){
+@media all and (max-width:900px){
     .pop{width: 80%;}
     .pop .close_btn{
         top: 15px;

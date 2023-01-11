@@ -1,7 +1,14 @@
 /********** pc **********/
+body {overflow-x: hidden;}
 body * {
     transition: .2s;
     -webkit-transition: .2s;
+}
+
+section.about .project_wrap,
+section.project .project_wrap{
+    max-width: 1600px;
+    margin: auto;
 }
 
 /***** intro_section *****/
@@ -37,7 +44,7 @@ body * {
     height: 100vh;
     background: var(--mint);
 }
-.intro .title_area .title p{line-height: 1.2;font-size: 60px;text-align: center;}
+.intro .title_area .title p{line-height: 1.2;font-size: 70px;text-align: center;}
 .intro .title_area .title .main_title{color: var(--mint);}
 .intro .title_area .title .sub_title{color: var(--intro-gray);font-weight: bolder;}
 
@@ -51,7 +58,7 @@ body * {
 .intro .text_area span{
     position: absolute;
     color: var(--intro-gray);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 .intro .text_area .name{
@@ -136,7 +143,7 @@ body * {
 .about .content_inner:not(:last-child){align-items: baseline;margin-bottom: 40px;}
 
 .about .about_inner{}
-.about .about_inner p:not(:last-child){margin-bottom: 10px;}
+.about .about_inner .detail_text p:not(:last-child){margin-bottom: 10px;}
 .about .about_inner span{display: inline-block;font-size: 18px;color: var(--dark-gray);}
 .about .about_inner .main_text{
     width: 70px;
@@ -232,8 +239,8 @@ body * {
     text-align: center;
 }
 
-.project .project_wrap{display: flex;flex-wrap: wrap;margin-top: 80px;}
-.project .project_wrap>li{
+.project .project_wrap>ul{display: flex;flex-wrap: wrap;margin-top: 80px;}
+.project .project_wrap>ul>li{
     position: relative;
     top: 5px;
     flex-shrink: 0;
@@ -244,7 +251,7 @@ body * {
     background: var(--white);
     border-radius: 15px;
 }
-.project .project_wrap>li:before, .project .project_wrap>li:after {
+.project .project_wrap>ul>li:before, .project .project_wrap>ul>li:after {
     z-index: -1;
     position: absolute;
     content: "";
@@ -263,7 +270,7 @@ body * {
     -ms-transform: rotate(-3deg);
     transform: rotate(-3deg);
 }
-.project .project_wrap>li:after{
+.project .project_wrap>ul>li:after{
     -webkit-transform: rotate(3deg);
     -moz-transform: rotate(3deg);
     -o-transform: rotate(3deg);
@@ -272,7 +279,7 @@ body * {
     right: 10px;
     left: auto;
 }
-.project .project_wrap>li:hover{top: 0;}
+.project .project_wrap>ul>li:hover{top: 0;}
 
 
 .project .project_wrap .img_box{
@@ -330,11 +337,11 @@ body * {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     background-color: var(--black);
 }
 .project .view_link:not(:last-child){margin-bottom: 5px;}
-.project .view_link span{color: var(--white);font-size: 14px;}
+.project .view_link span{color: var(--white);font-size: 16px;}
 .project .view_link img{
     display: block;
     width: auto;
@@ -350,37 +357,37 @@ body * {
 
 /********** tablet **********/
 @media all and (max-width: 1024px){
+    /***** intro_section *****/
+    .intro .title_area .title p{font-size: 45px;}
+    .intro .text_area span {font-size: 16px;}
+
     /***** about_section *****/
-    .about .title_area{padding: 20vh 0 10vh 40px;}
-    .about .text_area{padding: 10vh 40px 10vh 40px;}
+    .about .title_area{width: 45%;padding: 20vh 0 10vh 40px;}
+    .about .text_area{width: 55%;padding: 10vh 40px 10vh 40px;}
 
-    .about .content_inner{
-        display: block;
-    }
-    .about .detail_title{
-        display: inline-block;
-        width: auto;
-        margin-bottom: 10px;
+    .about .name_inner .name{font-size: 40px;}
+
+    .about .detail_title{font-size: 18px;}
+    .about .content_inner:not(:last-child){margin-bottom: 20px;}
+
+    .about .about_inner span{font-size: 16px;}
+    .about .about_inner .main_text{
+        width: 70px;
     }
 
-    .about .about_inner .detail_text,
-    .about .skills_inner .skills_text,
-    .about .detail_inner>ul,
-    .about .info_inner>ul{
-        width: 100%;
-    }
+    .about .skills_text{font-size: 16px;}
+    .about .detail_inner .company_name{font-size: 16px;}
+    .about .detail_inner .company_position{font-size: 14px;}
+    .about .detail_inner .detail_text p{font-size: 14px;}
+
+    .about .info_inner .text{font-size: 16px;}
 
     /***** project_section *****/
-    .project .project_wrap>li{
+    .project .project_wrap>ul>li{
         width: calc(100% / 2 - 20px);
         margin: 0 10px 30px;
     }
 }
-/* @media all and (max-width: 830px){
-    .project .project_wrap .thum_img{
-        height: 140px;
-    }
-} */
 
 /********** mobile **********/
 @media all and (max-width: 900px){
@@ -427,40 +434,41 @@ body * {
         width: 100%;
         height: auto;
         padding: 0 30px;
-        margin-top: 50px;
+        margin-top: 60px;
     }
     .about .detail_title{
-        font-size: 18px;
+        display: inline-block;
+        width: auto;
+        margin-bottom: 10px;
     }
+
+    .about .about_inner .detail_text,
+    .about .skills_inner .skills_text,
+    .about .detail_inner>ul,
+    .about .info_inner>ul{
+        width: 100%;
+    }
+
+    .about .content_inner{
+        display: block;
+    }
+
+    .about .content_inner:not(:last-child){margin-bottom: 40px;}
 
     .about .about_inner span{font-size: 16px;}
     .about .about_inner .main_text{
         width: 70px;
     }
 
-    .about .skills_text{font-size: 16px;}
-
     .about .detail_inner>ul li:not(:last-child)::after{
         border-bottom: 2px dotted var(--light-gray);
         margin: 15px 0;
-    }
-    .about .detail_inner .company_name{
-        font-size: 16px;
-    }
-    .about .detail_inner .company_position{
-        font-size: 14px;
-    }
-    .about .detail_inner .detail_text p{
-        font-size: 14px;
     }
 
     .about .info_inner>ul li:not(:last-child){margin-right: 20px;}
     .about .info_inner .icon_img{
         width: 55px;
         height: 55px;
-    }
-    .about .info_inner .text{
-        font-size: 16px;
     }
 
     /***** project_section *****/
@@ -470,8 +478,8 @@ body * {
         font-size: 40px;
     }
 
-    .project .project_wrap{margin-top: 50px;}
-    .project .project_wrap>li{
+    .project .project_wrap>ul{margin-top: 50px;}
+    .project .project_wrap>ul>li{
         top: 0;
         width: calc(100% / 2 - 10px);
         padding: 15px;

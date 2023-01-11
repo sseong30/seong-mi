@@ -25,6 +25,8 @@ $(document).ready(function() {
         $(".pop,.pop_bg").removeClass('show');
         // 스크롤 활성화
         document.body.style.overflow = "unset";
+        // project modal 내 최상단 이동
+        $(".pop .wrap_inner").scrollTop(0);
     });
 });
 
