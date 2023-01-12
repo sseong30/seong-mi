@@ -131,3 +131,13 @@ header .util_link{
     .pop .project_desc{padding: 15px 20px;}
     .pop .title{font-size: 18px;}
 }
+
+@media all and (max-width:768px){
+    header .util_wrap>li:not(:last-child){margin-right: 50px;}
+    header .util_link {font-size: 16px;}
+}
+
+@media all and (max-width:300px){
+    header .util_wrap>li:not(:last-child){margin-right: 30px;}
+    header .util_link {font-size: 14px;}
+}
